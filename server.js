@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
           <h2>My Course Goal</h2>
           <h3>${userGoal}</h3>
         </section>
-        <form action="/store-goal" method="POST">
+        <form action="/store-goal!" method="POST">
           <div class="form-control">
             <label>Course Goal</label>
             <input type="text" name="goal">

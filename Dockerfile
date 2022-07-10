@@ -3,11 +3,13 @@ FROM node
 # 도커에게 모든 후속 명령이 그 폴더 내부에서 실행됨을 알림
 WORKDIR /app
 
+COPY package.json /app
+
+RUN npm install
+
 # './'은 도커 컨테이너의 현재 작업 디렉토리를 의미함
 # (작업 디렉토리를 /app으로 설정했기 때문에 RUN뿐만 아니라 COPY도 작업 디렉토리로 지정)
 COPY . /app
-
-RUN npm install
 
 EXPOSE 80
 
